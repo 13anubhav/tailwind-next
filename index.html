@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next.js Deployment Guide</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Author Information -->
+    <meta name="author" content="Anubhav">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="tail-wind-next.jpeg">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:title" content="Next.js Deployment Guide">
+    <meta property="og:description" content="A modern guide to deploying your TailwindNext.js application on Netlify with step-by-step instructions">
+    <meta property="og:image" content="tail-wind-next.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:author" content="Anubhav">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Next.js Deployment Guide">
+    <meta name="twitter:description" content="A modern guide to deploying your TailwindNext.js application on Netlify with step-by-step instructions">
+    <meta name="twitter:image" content="tail-wind-next.jpeg">
+    <meta name="twitter:creator" content="@Anubhav">
+</head>
+<body>
+    <div class="glow-effect glow-1"></div>
+    <div class="glow-effect glow-2"></div>
+
+    <header>
+        <div class="container">
+            <h1>Deploy TailwindNext.js to Netlify</h1>
+            <p class="subtitle">A modern guide to deploying your TailwindNext.js application on Netlify with step-by-step instructions</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="step-container">
+
+            <div class="step-card">
+                <div class="step-number">00</div>
+                <h2 class="step-title">Create Next.js</h2>
+                <p>Create your latest next.js App with the following commands:</p>
+                <div class="code-block">
+                    <button class="copy-btn">Copy Code</button>
+                    <pre><code>npx create-next-app my-next-app</code></pre>
+                </div>
+            </div>
+
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <h2 class="step-title">Configure Next.js</h2>
+                <p>Update your next.config.ts file with the following configuration:</p>
+                <div class="code-block">
+                    <button class="copy-btn">Copy Code</button>
+                    <pre><code>const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  reactStrictMode: true,
+};</code></pre>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <h2 class="step-title">Update Package.json</h2>
+                <p>Add the export script to your package.json:</p>
+                <div class="code-block">
+                    <button class="copy-btn">Copy Code</button>
+                    <pre><code>"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "export": "next build"
+}</code></pre>
+                </div>
+            </div>
+
+            
+               
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <h2 class="step-title">Build and Export</h2>
+                <p>Run the following command to build and export your Next.js app:</p>
+                <div class="code-block">
+                    <button class="copy-btn">Copy Code</button>
+                    <pre><code>npm run export</code></pre>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <h2 class="step-title">Create specific Nextjs Version</h2>
+                <p>Run the following command to build and create a specific Next.js version of your app:</p>
+                <div class="code-block">
+                    <button class="copy-btn">Copy Code</button>
+                    <pre><code>npx create-next-app@15.1.6 project-name</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="success-message" id="successMessage">
+        ✨ Code copied to clipboard!
+    </div>
+
+    <div class="success-message" id="successMessage">
+        ✨ Code copied to clipboard!
+    </div>
+    
+    <footer class="container credit-section" style="text-align: center;">
+        <div class="credit">
+            <p>Created with ❤️ By Anubhav</p>
+           
+        </div>
+    </footer>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
